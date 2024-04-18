@@ -2,6 +2,8 @@
 import { computed, onMounted, ref } from "vue";
 import { useRouter , useRoute} from "vue-router";
 import IconMenu from '../icons/IconMenu.vue'; 
+import Logo from "../icons/Logo.vue";
+
 
 const router = useRouter()
 const route = useRoute()
@@ -32,7 +34,7 @@ const navLink = () => {
         <div class="container">
             <div class="flex justify-between items-center h-max">
                 <div class="logo">
-                    <h4 class="font-medium text-2xl text-brand-1 ">LOGO</h4>
+                    <img src="../../assets/logo.png" alt="" srcset="">
                 </div>
                 <button @click="bukaMenu" class="lg:hidden"><IconMenu /></button>
                 <div ref="refMenu" class="menu hidden transition-all duration-300  absolute left-0 top-16 bg-white w-full p-6 lg:block lg:static lg:p-0 lg:w-auto">
