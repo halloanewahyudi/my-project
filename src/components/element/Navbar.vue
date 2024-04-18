@@ -34,7 +34,9 @@ const navLink = () => {
         <div class="container">
             <div class="flex justify-between items-center h-max">
                 <div class="logo">
-                    <img src="../../assets/logo.png" alt="" srcset="">
+                    <router-link to="/">
+                        <img src="../../assets/logo.png" alt="" srcset="" class="hover:-rotate-180 ease-in-out duration-1000">
+                    </router-link>
                 </div>
                 <button @click="bukaMenu" class="lg:hidden"><IconMenu /></button>
                 <div ref="refMenu" class="menu hidden transition-all duration-300  absolute left-0 top-16 bg-white w-full p-6 lg:block lg:static lg:p-0 lg:w-auto">

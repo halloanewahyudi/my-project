@@ -6,24 +6,18 @@ import Card from '../components/element/Card.vue';
 import { useFormStore } from '../stores/form-store';
 import Form from '../components/Form.vue';
 const formStore = useFormStore()
-const cardContent = ref( [
-    {
-        title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        body:' Pariatur beatae vero tenetur laudantium hic maxime, ipsa, accusantium quibusdam, accusamus esse dolorem eaque enim non omnis cum labore dolor cumque animi!'
-    },
-    {
-        title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        body:' Pariatur beatae vero tenetur laudantium hic maxime, ipsa, accusantium quibusdam, accusamus esse dolorem eaque enim non omnis cum labore dolor cumque animi!'
-    },
-    {
-        title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        body:' Pariatur beatae vero tenetur laudantium hic maxime, ipsa, accusantium quibusdam, accusamus esse dolorem eaque enim non omnis cum labore dolor cumque animi!'
-    }
-])
+
+const formLogin = ref(null)
+const getScale = () => {
+    formLogin.value.classList.add('scale-125') 
+    setTimeout(() => {
+        formLogin.value.classList.remove('scale-125') 
+    }, 300);
+}
 </script>
 <template>
   
-<div class=" p-6 w-full bg-neutral-50">
+<div class=" p-6 w-full bg-neutral-50 ">
     <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[calc(100vh-115px)] justify-center items-center container">
         <div class="flex flex-col gap-5">
             <div>
@@ -35,7 +29,7 @@ const cardContent = ref( [
             </h1>
             </div>
             <p>
-                Disini hanya menampilkan sebuah sampling fungsi pada penekanan konten inti seperti  pembuatan <span class="font-bold text-brand-1 p-2 bg-brand-6  -rotate-1 inline-block "> <router-link to="/steping" class="hover:border-b border-b-brand-1 duration-300">skema steping form </router-link> , <router-link to="/table" class="hover:border-b border-b-brand-1 duration-300">  data table </router-link>, member area, </span> berdasarkan referensi website <a href="https://www.sertifikasi.lsppenerbitan.id" class="hover:border-b border-b-brand-1 duration-300 font-bold text-brand-1" target="_blank"> lsppenerbitan.id</a>  dan selebihnya konten bersifat umum <span class="text-sm itaic"> ( yang akan di bahas di kesempatan lain ) </span>
+                Disini hanya menampilkan sebuah sampling fungsi pada penekanan konten inti seperti  pembuatan <span class="font-bold text-brand-1 p-2 bg-brand-6  -rotate-1 inline-block "> <router-link to="/steping" class="hover:border-b border-b-brand-1 duration-300">skema steping form </router-link> , <router-link to="/table" class="hover:border-b border-b-brand-1 duration-300">  data table </router-link>, <button @click="getScale" class="hover:border-b border-b-brand-1 duration-300  text-brand-1"> member area </button>, </span> berdasarkan referensi website <a href="https://www.sertifikasi.lsppenerbitan.id" class="hover:border-b border-b-brand-1 duration-300 font-bold text-brand-1" target="_blank"> lsppenerbitan.id</a>  dan selebihnya konten bersifat umum <span class="text-sm itaic"> ( yang akan di bahas di kesempatan lain ) </span>
             </p>
             <p>
                 Dan kemungkinan bisa jadi tidak sama persis dengan web referensi, maka bisa jadi nantinya akan ada penyesuaan kebutuhan misal validasi, konsep ,desain  dan apapun yang di perlukan yang di diskusikan secara komprehensif 
@@ -44,7 +38,7 @@ const cardContent = ref( [
 
         <div class="flex flex-col justify-center items-center p-6 gap-5">
         
-           <form class="rounded-lg p-6 lg:p-10 bg-white border shadow-xl w-full max-w-[340px] shrink-0 flex flex-col gap-4">
+           <form ref="formLogin" class="rounded-lg p-6 lg:p-10 bg-white border shadow-xl w-full max-w-[340px] shrink-0 flex flex-col gap-4 transition-all ease-in-out">
             <h2 class="text-xl lg:text-2xl font-bold text-brand-1 text-center"> Login</h2>
             <div class="form-group">
                 <label for="username"> Username / email</label>
