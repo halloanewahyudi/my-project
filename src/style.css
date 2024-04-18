@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body{
+        padding-top: 66px;
+    }
+    .dp__input,
+    .form-select,
+    .form-control{
+        @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-brand-1 focus:border-brand-1 active:ring-brand-1 block w-full p-2.5
+    }
+    .dp__action_button{
+        @apply text-lg !important;
+    }
+    
+    option{
+        @apply text-base py-2;
+    }
+    input[type="radio"].radio{
+        @apply w-4 h-4 text-brand-1 bg-gray-100 border-gray-300 focus:ring-brand-2 
+    }
+    .submit{
+        @apply py-2 px-6 rounded-lg bg-brand-1 text-brand-4 hover:bg-brand-2 hover:ring-2 hover:ring-brand-3 duration-300;
+    }
+
+    .steping-nav{
+        @apply flex gap-3 p-4 w-full rounded-lg items-start border bg-brand-4 border-white hover:shadow-lg duration-300;
+    }
+}
