@@ -35,7 +35,7 @@ const cardContent = ref( [
             </h1>
             </div>
             <p>
-                Disini hanya menampilkan sebuah sampling fungsi pada penekanan konten inti seperti  pembuatan <span class="font-bold text-brand-1 p-2 bg-brand-6  -rotate-1 inline-block "> <router-link to="/steping" class="hover:border-b border-b-brand-1 duration-300">skema steping form </router-link> , <router-link to="/table" class="hover:border-b border-b-brand-1 duration-300">  data table </router-link>, member area, </span> berdasarkan referensi website <a href="https://www.sertifikasi.lsppenerbitan.id" class="hover:border-b border-b-brand-1 duration-300 font-bold text-brand-1" target="_blank"> lsppenerbitan.id</a>  dan selebihnya konten bersifat umum
+                Disini hanya menampilkan sebuah sampling fungsi pada penekanan konten inti seperti  pembuatan <span class="font-bold text-brand-1 p-2 bg-brand-6  -rotate-1 inline-block "> <router-link to="/steping" class="hover:border-b border-b-brand-1 duration-300">skema steping form </router-link> , <router-link to="/table" class="hover:border-b border-b-brand-1 duration-300">  data table </router-link>, member area, </span> berdasarkan referensi website <a href="https://www.sertifikasi.lsppenerbitan.id" class="hover:border-b border-b-brand-1 duration-300 font-bold text-brand-1" target="_blank"> lsppenerbitan.id</a>  dan selebihnya konten bersifat umum <span class="text-sm itaic"> ( yang akan di bahas di kesempatan lain ) </span>
             </p>
             <p>
                 Dan kemungkinan bisa jadi tidak sama persis dengan web referensi, maka bisa jadi nantinya akan ada penyesuaan kebutuhan misal validasi, konsep ,desain  dan apapun yang di perlukan yang di diskusikan secara komprehensif 
